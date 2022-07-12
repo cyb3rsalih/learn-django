@@ -9,44 +9,35 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 </head>
 <body style="padding: 20px;">
-    <h1>T-Test Calculator</h1>
-    <h2>Independent Samples t-test</h2>
+    <h1>Chi-Square Calculator</h1>
+    <h2>2x2 Contingency Table</h2>
     <form action="" method="post">
 	{% csrf_token %}      
        <div class="form-row">
         <div class="form-group col-md-6 mb-0">
         <table class="table table-bordered">
             <thead>
-                <tr>
-                  <th>#</th>
-                  <th>N Value</th>
-                  <th>Mean</th>
-                  <th>Stdev</th>
-                </tr>
-              </thead>
+               <th> # </th> 
+               <th>Col 1</th> 
+               <th>Col 2</th> 
+            </thead>
               <tbody>
                 <tr>
-                    <td>Group 1</td>
+                    <td>Row 1</td>
                     <td>
-                        {{ form.n1|as_crispy_field }}
+                        {{ form.a|as_crispy_field }}
                     </td>
                     <td>
-                        {{ form.mean_1|as_crispy_field }}
-                    </td>
-                    <td>
-                        {{ form.stdev_1|as_crispy_field }}
+                        {{ form.b|as_crispy_field }}
                     </td>
                   </tr>
                   <tr>
-                    <td>Group 2</td>
+                    <td>Row 2</td>
                     <td>
-                        {{ form.n2|as_crispy_field }}
+                        {{ form.c|as_crispy_field }}
                     </td>
                     <td>
-                        {{ form.mean_2|as_crispy_field }}
-                    </td>
-                    <td>
-                        {{ form.stdev_2|as_crispy_field }}
+                        {{ form.d|as_crispy_field }}
                     </td>
                   </tr>
               </tbody>

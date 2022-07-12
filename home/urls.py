@@ -4,8 +4,9 @@ from . import views
 
 urlpatterns = [
     # ex: /home/
-    path('', views.myform,name='myform'),
-    path('home',views.index,name='index'),
+    path('t', views.myform,name='myform'),
+    path('chi', views.chisform,name='chisform'),
+    path('',views.index,name='index'),
     # ex: /home/5/
     # path('<int:question_id>/',views.detail,name='detail'),
     # # ex: /home/5/results/
